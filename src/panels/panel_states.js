@@ -18,18 +18,20 @@ export async function renderPanel3(controlsEl, vizEl, captionEl, state, metadata
 
   // Controls
   const measureControl = createDropdown(
-    'Fairness Measure',
+    'Select a Fairness Measure',
     metadata.fairness_measures,
     state.panel3.measure,
     (value) => {
       state.panel3.measure = value;
       updateState();
-    }
+    },
+    false, // isStateDropdown
+    true   // showInfo
   );
   controlsEl.appendChild(measureControl);
 
   const yearControl = createDropdown(
-    'Year',
+    'Select a Year',
     metadata.years,
     state.panel3.year.toString(),
     (value) => {
@@ -45,7 +47,7 @@ export async function renderPanel3(controlsEl, vizEl, captionEl, state, metadata
     ? metadata.all_demographic_groups
     : metadata.all_demographic_groups.filter(g => g !== 'White' && g !== 'Male');
   const groupControl = createDropdown(
-    'Demographic Group',
+    'Select a Demographic',
     filteredGroups,
     state.panel3.demographic_group,
     (value) => {

@@ -25,7 +25,9 @@ export async function renderPanel2(controlsEl, vizEl, captionEl, state, metadata
     (value) => {
       state.panel2.measure = value;
       updateState();
-    }
+    },
+    false, // isStateDropdown
+    true   // showInfo
   );
   controlsEl.appendChild(measureControl);
 

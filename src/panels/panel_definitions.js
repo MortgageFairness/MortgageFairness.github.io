@@ -16,7 +16,7 @@ export function renderDefinitionsPage() {
             </div>
 
             <div style="margin-bottom: 25px;">
-              <h4 style="margin-bottom: 10px; font-size: 1.1rem; color: var(--color-accent);">Marginal Candidates</h4>
+              <h4 style="margin-bottom: 10px; font-size: 1.1rem; color: var(--color-accent);">Marginal Outcome Test</h4>
               <p style="line-height: 1.7;">Difference in lending standards. The marginal outcome test is satisfied if borrowers at the margin default at the same rate across groups. Marginal applicants are defined as those who submit one application resulting in an approval and another resulting in a denial. A violation of this measure is defined as the difference in default rate between marginal applicants in the reference demographic group and marginal applicants in a target demographic group. For example, a value of 10 for Black borrowers means that Black marginal borrowers are 10 percentage points less likely to default than White marginal borrowers. This is because lower default rates at the margin imply higher lending standards among this group, relative to the reference group.</p>
             </div>
 
