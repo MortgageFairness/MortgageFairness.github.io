@@ -104,6 +104,7 @@ export async function renderPanel1(controlsEl, vizEl, captionEl, state, metadata
 
   const plot = Plot.plot({
     marks: [
+      Plot.ruleY([0], { stroke: 'var(--color-text-secondary)', strokeDasharray: '4,4', strokeOpacity: 0.5 }),
       Plot.line(dataWithTooltips, { x: 'year', y: 'value', stroke: 'fairness_measure', strokeWidth: 2 }),
       Plot.dot(dataWithTooltips, {
         x: 'year',

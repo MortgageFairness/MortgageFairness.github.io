@@ -98,6 +98,7 @@ export async function renderPanel2(controlsEl, vizEl, captionEl, state, metadata
 
   const plot = Plot.plot({
     marks: [
+      ...(state.panel2.measure !== 'Representativeness' ? [Plot.ruleY([0], { stroke: 'var(--color-text-secondary)', strokeDasharray: '4,4', strokeOpacity: 0.5 })] : []),
       Plot.line(dataWithTooltips2, { x: 'year', y: 'value', stroke: 'demographic_group', strokeWidth: 2 }),
       Plot.dot(dataWithTooltips2, {
         x: 'year',
